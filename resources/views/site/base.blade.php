@@ -45,9 +45,9 @@ jQuery(document).ready(function () {
                 <li><a href="#">Archive</a></li>
               </ul>
             </li> --}}
-            <li><a href="{{route('services')}}">Services</a></li>
-            <li><a href="{{route('blog')}}">Blog</a></li>
-            <li><a href="{{route('contacts')}}">Contacts </a></li>
+            <li><a href="{{route('search')}}">Buscar Pet</a></li>
+            {{-- <li><a href="{{route('blog')}}">Blog</a></li> --}}
+            <li><a href="{{route('contacts')}}">Contato </a></li>
             @auth
               <li class="with_ul"><a href="{{ url("login") }}">Olá {{auth()->user()->name}}</a>
                 <ul>

@@ -97,7 +97,6 @@ class PetController extends Controller
 
         return Redirect::route('pet.index')->with('message', 'Atualizado com sucesso!');
 
-        //dd($request->all());
     }
 
     public function destroy($id)

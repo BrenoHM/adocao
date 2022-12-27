@@ -23,7 +23,7 @@
 						".email":{rx:/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i,target:'input'},
 						".phone":{rx:/^\+?(\d[\d\-\+\(\) ]{5,}\d$)/,target:'input'},
 						".fax":{rx:/^\+?(\d[\d\-\+\(\) ]{5,}\d$)/,target:'input'},
-						".message":{rx:/.{20}/,target:'textarea'}
+						".message":{rx:/.{10}/,target:'textarea'}
 					},
 					preFu:function(){
 						_.labels.each(function(){
@@ -109,7 +109,11 @@
 									state:_.getValFromLabel($('.state',_.form)),
 									message:_.getValFromLabel($('.message',_.form)),
 									owner_email:_.ownerEmail,
-									stripHTML:_.stripHTML
+									stripHTML:_.stripHTML,
+									_token: $("input[name=_token]").val()
+								},
+								beforeSend: function() {
+									$(".loading").css('display', 'flex');
 								},
 								success: function(){
 									_.showFu()
@@ -118,6 +122,7 @@
 					},
 					showFu:function(){
 						_.success.slideDown(function(){
+							$(".loading").css('display', 'none');
 							setTimeout(function(){
 								_.success.slideUp()
 								_.form.trigger('reset')

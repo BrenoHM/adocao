@@ -34,7 +34,12 @@ jQuery(document).ready(function () {
 <header>
   <div class="container_12">
     <div class="grid_12">
-      <h1><a href="{{route('home')}}"><img src="{{asset('images/logo.png')}}" alt=""></a> </h1>
+      <h1>
+        <a href="{{route('home')}}">
+          {{-- <img src="{{asset('images/dog.svg')}}" alt=""> --}}
+          @include('site.logo')
+        </a>
+      </h1>
       <div class="menu_block">
         <nav>
           <ul class="sf-menu">
@@ -71,11 +76,14 @@ jQuery(document).ready(function () {
 <footer>
     <div class="container_12">
       <div class="grid_12">
-        <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+        {{-- <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div> --}}
         <p>ClubPet &copy; @php echo date('Y'); @endphp | <a href="#">Privacy Policy</a> | Design by: <a href="https://github.com/BrenoHM" target="_blank">Breno Mol</a></p>
       </div>
       <div class="clear"></div>
     </div>
   </footer>
+  <div class="loading">
+    <span class="loader"></span>
+  </div>
   </body>
   </html>

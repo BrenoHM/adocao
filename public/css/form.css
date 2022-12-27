@@ -41,7 +41,7 @@ padding-top: 3px;}
 	position:relative;
 	display: block;
 	min-height: 45px;
-	width: 220px;
+	width: 100%;
 	float: left;
 }
 
@@ -101,16 +101,17 @@ padding-top: 3px;}
 #form .success {
 	display: none;
 	position: absolute;
-	width: 220px;
+	width: 100%;
 	background: #fff;
 	border: 1px solid #e6e6e6;
 	text-align: center;
 	color: #5e5e5e;
 	padding: 20px 10px;
-	z-index: 999;
+	z-index: 1000;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box; /*Firefox 1-3*/
 	-webkit-box-sizing: border-box; /* Safari */
+	background: aquamarine;
 }
 
 

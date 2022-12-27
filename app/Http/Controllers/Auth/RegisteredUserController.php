@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\MailRegisteredUser;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
 
@@ -47,6 +49,13 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
+
+        // $testMailData = [
+        //     'title' => 'Test Email From AllPHPTricks.com',
+        //     'body' => 'This is the body of test email.'
+        // ];
+
+        Mail::to($request->email)->send(new MailRegisteredUser($user->toArray()));
 
         Auth::login($user);
 

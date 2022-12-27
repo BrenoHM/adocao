@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BreedController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProfileController;
@@ -44,9 +45,8 @@ Route::get('/blog', function () {
     return view('site.blog');
 })->name('blog');
 
-Route::get('/contacts', function () {
-    return view('site.contacts');
-})->name('contacts');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+Route::post('/contacts', [ContactController::class, 'send'])->name('contacts.send');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard', ['ok' => true]);

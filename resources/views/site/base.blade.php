@@ -24,6 +24,25 @@ jQuery(document).ready(function () {
         easingType: 'easeOutQuart'
     });
 });
+
+function logout(){
+  $.ajax({
+     url : '{{ route("logout") }}',
+     type : 'post',
+     data : {_token: "{{csrf_token()}}",},
+     beforeSend : function(){
+        $(".loading").css('display', 'flex');
+     }
+  })
+  .done(function(msg){
+      $(".loading").css('display', 'none');
+      window.location.href = window.location.href;
+  })
+  .fail(function(jqXHR, textStatus, msg){
+    $(".loading").css('display', 'none');
+    console.log(msg);
+  });
+}
 </script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -57,12 +76,13 @@ jQuery(document).ready(function () {
               <li class="with_ul"><a href="{{ url("login") }}">Olá {{auth()->user()->name}}</a>
                 <ul>
                   <li><a href="{{ url("profile") }}">Perfil</a></li>
-                  <li><a href="{{ url("logout") }}">Sair</a></li>
+                  <li><a href="javascript:void(0)" onclick="logout();">Sair</a></li>
                 </ul>
               </li>
             @endauth
             @guest
               <li><a href="{{ url("login") }}">Entrar</a></li>
+              <li><a href="{{ url("register") }}">Cadastrar</a></li>
             @endguest
           </ul>
         </nav>

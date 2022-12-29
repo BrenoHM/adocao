@@ -34,8 +34,8 @@
           </address>
         </div> --}}
         <div>Faça uma doação para que possamos continuar com esse lindo projeto</div>
-        <p>Chave pix</p>
-        <div><strong>Chave Pix</strong>:dc25aa47-1dbf-4562-ac1f-195223e94457</div>
+        <br />
+        <div><strong>Chave Pix</strong>: <span class="pix-code">dc25aa47-1dbf-4562-ac1f-195223e94457<span/></div>
       </div>
       <div class="grid_5 prefix_1">
         <h2 class="ic1">Contato</h2>

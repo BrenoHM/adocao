@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $pets = Pet::with('breed')->limit(10)->get();
+        $pets = Pet::with('breed')->orderBy('id', 'desc')->limit(10)->get();
         return view('site.home', [
             'pets' => $pets
         ]);

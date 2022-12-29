@@ -32,7 +32,7 @@
                 <option {{request('color') == 'Azul' ? 'selected' : ''}}>Azul</option>
                 <option {{request('color') == 'Vermelho' ? 'selected' : ''}}>Vermelho</option>
             </select>
-            <button class="w-1/4 bg-gray-300 text-white">Buscar</button>
+            <button class="w-1/4 bg-gray-300 text-white hover:bg-gray-500">Buscar</button>
         </form>
     </div>
 
@@ -53,6 +53,8 @@
           <div class="clear he1"></div>
         @endif
     @endforeach
+
+    <div class="clear"></div>
     
     {{$pets->withQueryString()->links()}}
 

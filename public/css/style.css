@@ -6,8 +6,9 @@
 @import "../css/grid.css";
 @import "../css/superfish.css";
 
-
-
+.text-center {
+	text-align: center;
+}
 
 html {
 	width: 100%;
@@ -456,6 +457,7 @@ a.next:hover {
 
 
 .bottom_block.bot1  {
+	padding-top: 92px;
 	padding-bottom: 92px;
 }
 
@@ -697,3 +699,21 @@ footer address {
         transform: rotate(360deg);
     }
 } 
+
+.dados-estatisticos {
+	color: #fff;
+	font-size: 25px;
+}
+
+.dados-estatisticos span {
+	margin-bottom: 24px;
+	display: block;
+}
+
+.pix-code {
+	background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-weight: bold;
+    color: #000;
+}

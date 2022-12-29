@@ -15,15 +15,16 @@
           <p><strong>Características da Raça:</strong> {{$pet->breed->characteristics}}</p>
           <p><strong>Telefone:</strong> {{$pet->phone}}</p>
         </div>
-        <div class="clear"></div>
-        <a href="https://wa.me/+55<?=str_replace(['(', ')', '-', ' '], '', $pet->phone)?>?text=Olá, gostaria de adotar o {{$pet->name}}." class="btn" target="_blank">
-          Quero entrar em contato com o dono
-        </a>
       </div>
       
       <div class="grid_4 prefix_1">
         <h2 class="ic1">Breve História</h2>
         <p>{{$pet->description}}</p>
+
+        <div class="clear"></div>
+        <a href="https://wa.me/+55<?=str_replace(['(', ')', '-', ' '], '', $pet->phone)?>?text=Olá, gostaria de adotar o {{$pet->name}}." class="btn" target="_blank">
+          Entrar em contato
+        </a>
       </div>
     </div>
   </div>
@@ -47,7 +48,7 @@
             <div class="clear"></div>
           </div>
         </div>
-        @if ($key % 3 == 0)
+        @if (($key + 1) % 3 == 0)
           <div class="clear he1"></div>
         @endif
       @endforeach
@@ -112,17 +113,59 @@
   </div>
   <div class="bottom_block bot1">
     <div class="container_12">
-      <div class="grid_12">
-        <h2>Our Staff </h2>
-      </div>
-      <div class="grid_4">
-        <div class="pad2"> <img src="{{asset('images/page2_img8.jpg')}}" alt="" class="img_inner fleft">
+      {{-- <div class="grid_12">
+        <h2>Dados </h2>
+      </div> --}}
+
+      {{-- <div class="grid_4">
+        <div class="pad2">
+          <img src="{{asset('images/page2_img8.jpg')}}" alt="" class="img_inner fleft">
           <div class="extra_wrapper">
             <div class="col2"><a href="#">Mark Kromstein</a></div>
             Kaes quis orci eget diam viverralopr conequat. Busce sagit quam ihui hyhy kolo opirlo pulvinarhjkj. </div>
         </div>
+      </div> --}}
+
+      <div class="grid_4 text-center dados-estatisticos">
+        <div class="pad2">
+          {{-- <img src="{{asset('images/page2_img8.jpg')}}" alt="" class="img_inner fleft"> --}}
+          <div class="extra_wrapper">
+            {{-- <div class="col2">
+              <a href="#">Mark Kromstein</a>
+            </div> --}}
+            <span>{{$qtdUsers}}</span>
+            <p>Doadores</p>
+          </div>
+        </div>
       </div>
-      <div class="grid_4">
+
+      <div class="grid_4 text-center dados-estatisticos">
+        <div class="pad2">
+          {{-- <img src="{{asset('images/page2_img8.jpg')}}" alt="" class="img_inner fleft"> --}}
+          <div class="extra_wrapper">
+            {{-- <div class="col2">
+              <a href="#">Mark Kromstein</a>
+            </div> --}}
+            <span>{{$qtdPets}}</span>
+            <p>Pets Cadastrados</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid_4 text-center dados-estatisticos">
+        <div class="pad2">
+          {{-- <img src="{{asset('images/page2_img8.jpg')}}" alt="" class="img_inner fleft"> --}}
+          <div class="extra_wrapper">
+            {{-- <div class="col2">
+              <a href="#">Mark Kromstein</a>
+            </div> --}}
+            <span>-</span>
+            <p>Doações</p>
+          </div>
+        </div>
+      </div>
+      
+      {{-- <div class="grid_4">
         <div class="pad2"> <img src="{{asset('images/page2_img9.jpg')}}" alt="" class="img_inner fleft">
           <div class="extra_wrapper">
             <div class="col2"><a href="#">Sandra Grosh</a></div>
@@ -135,7 +178,7 @@
             <div class="col2"><a href="#">Ann Priston</a></div>
             Zaes quis orci eget diam viverralopr con equat. Ausce sagit quam ihui hyhy kolo opirlo pulvinarhjkjlo. </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </div>
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pet;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -19,10 +20,15 @@ class AboutController extends Controller
                         ->limit(6)
                         ->get();
         //limit 6
+
+        $qtdUsers = User::count();
+        $qtdPets = Pet::count();
         
         return view('site.about', [
             'pet' => $pet,
-            'relations' => $relations
+            'relations' => $relations,
+            'qtdUsers' => $qtdUsers,
+            'qtdPets' => $qtdPets
         ]);
     }
 }

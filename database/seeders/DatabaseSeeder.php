@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
             BreedSeeder::class
         ]);
 
-        \App\Models\Pet::factory(50)->create();
+        //\App\Models\Pet::factory(50)->create();
     }
 }

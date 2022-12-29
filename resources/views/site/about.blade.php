@@ -1,5 +1,10 @@
 @extends('site.base')
 @section('title', "| Sobre $pet->name")
+
+@section('css')
+<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+@endsection
+
 @section('content')
 <div class="page1_block nb">
     <div class="container_12">
@@ -25,6 +30,19 @@
         <a href="https://wa.me/+55<?=str_replace(['(', ')', '-', ' '], '', $pet->phone)?>?text=Olá, gostaria de adotar o {{$pet->name}}." class="btn" target="_blank">
           Entrar em contato
         </a>
+
+        <h2 class="ic1">Compartilhe</h2>
+
+        <div class="btn-compartilhar">
+          <a href="whatsapp://send?text=Ajude a compartilhar este pet: {{route('about', $pet->id)}}" target="_blank" title="Compartilhar no Zap">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://facebook.com/sharer/sharer.php?u={{route('about', $pet->id)}}" target="_blank" title="Compartilhar no Face">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

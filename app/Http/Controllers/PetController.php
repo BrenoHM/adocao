@@ -58,6 +58,12 @@ class PetController extends Controller
 
     public function edit(Pet $pet)
     {
+        if($pet->user_id !== Auth::id()) {
+
+            return Redirect::route('pet.index')->with('message', 'Este pet não pertence ao seu usuário!');
+
+        }
+        
         return Inertia::render('Pet/Edit', [
             'pet' => $pet,
             'action' => 'Editar'

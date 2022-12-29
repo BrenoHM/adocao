@@ -717,3 +717,15 @@ footer address {
     font-weight: bold;
     color: #000;
 }
+
+.btn-compartilhar {
+	font-size: 35px;
+}
+
+.btn-compartilhar .fa.fa-whatsapp {
+	color: #075e54;
+}
+
+.btn-compartilhar .fa.fa-facebook-official {
+	color: #0165E1;
+}

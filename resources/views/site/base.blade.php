@@ -3,8 +3,8 @@
 <head>
 <title>Club Pet @yield('title')</title>
 <meta charset="utf-8">
-<link rel="icon" href="{{asset('images/favicon.ico')}}">
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" href="{{asset('favicon.ico')}}">
+<link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 @yield('css')

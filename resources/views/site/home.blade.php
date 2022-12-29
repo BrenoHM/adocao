@@ -100,35 +100,6 @@
       <h2 class="ic1">Quer doar o seu pet?</h2>
       <p>Caso você deseja doar um pet, faça seu cadastro clicando no link abaixo:</p>
       <a href="{{route('dashboard')}}" class="btn">Quero doar um Pet</a>
-      {{-- <ul class="list">
-        <li> <span>
-          <time datetime="2045-01-01">27<span>APR</span></time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1"><a href="#">Duis posuere consectetur pellentesqe;</a>
-              <time datetime="2045-01-01">April 27.03.45</time>
-            </div>
-            Sed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risus,placerat ut scelerisque suscipit eu ante. Nullam vitae dolor ullcper felises</div>
-        </li>
-        <li> <span class="cnt">
-          <time datetime="2045-01-01">28<span>APR</span></time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1"><a href="#">Kuuis posuere consectetur pellentes;</a>
-              <time datetime="2045-01-01">April 28.03.45</time>
-            </div>
-            Eed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risulacerat ut scelerisque et suscipit eu ante. Nullam vitae dolor ullcper felises. </div>
-        </li>
-        <li> <span>
-          <time datetime="2045-01-01">29<span>APR</span></time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1"><a href="#">Opuis posuere honsectetur pellentesyt;</a>
-              <time datetime="2045-01-01">April 29.03.45</time>
-            </div>
-            Koed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risujo placerat ut scelerisque et suscipit eu ante. Ullam vitae dolor ullcper felises. </div>
-        </li>
-      </ul> --}}
     </div>
   </div>
 </div>
@@ -139,7 +110,7 @@
     </div>
     <div class="clear"></div>
     <ul class="carousel1">
-      @foreach ($pets as $pet)
+      @forelse ($pets as $pet)
         <li class="grid_4"> <img src="photos/{{$pet->photo}}" alt="{{$pet->name}}" width="139" class="img_inner fleft">
           <div class="extra_wrapper pad1">
             <p class="col2"><a href="{{route('about', $pet->id)}}">{{$pet->name}}</a></p>
@@ -147,37 +118,9 @@
             <p>{{$pet->breed->characteristics}}</p>
           </div>
         </li>
-      @endforeach
-      {{-- <li class="grid_4"> <img src="images/carousel1_img1.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Praesent quis orcidiam viverralopr </a></p>
-          Raes quis orci eget diam viverralopr con equat. Fusce sagit quam ihui hyhy kolo opirlo pulvinarhjkjo. </div>
-      </li>
-      <li class="grid_4"> <img src="images/carousel1_img2.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Aeraesent quis hoj rcieget diam iverral.</a></p>
-          Loaesent quis orci diam viverralopr con equat. Lusce sagittis quam ihui hyhy opir pulvinarhjk velit. </div>
-      </li>
-      <li class="grid_4"> <img src="images/carousel1_img3.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Tyeraesent quis hojo rcieget iam iverralji.</a></p>
-          Eroaesent quis orci ediam viverralopr con jikjulo poiu retyulo hyk equat. Usce sagittis ki quam ihui hyhy opirp. </div>
-      </li>
-      <li class="grid_4"> <img src="images/carousel1_img4.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Aeraesent quis hoj rcieget diam iverral.</a></p>
-          Loaesent quis orci diam viverralopr con equat. Lusce sagittis quam ihui hyhy opir pulvinarhjk velit. </div>
-      </li>
-      <li class="grid_4"> <img src="images/carousel1_img5.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Aeraesent quis hoj rcieget diam iverral.</a></p>
-          Loaesent quis orci diam viverralopr con equat. Lusce sagittis quam ihui hyhy opir pulvinarhjk velit. </div>
-      </li>
-      <li class="grid_4"> <img src="images/carousel1_img6.jpg" alt="" class="img_inner fleft">
-        <div class="extra_wrapper pad1">
-          <p class="col2"><a href="#">Aeraesent quis hoj rcieget diam iverral.</a></p>
-          Loaesent quis orci diam viverralopr con equat. Lusce sagittis quam ihui hyhy opir pulvinarhjk velit. </div>
-      </li> --}}
+      @empty
+        <p>Ainda não temos nenhum pet cadastrado :(</p>
+      @endforelse
     </ul>
   </div>
 </div>
@@ -193,9 +136,6 @@
     <div class="grid_4 prefix_2">
       <h2 class="ic1">Alguma pergunta?</h2>
       <img src="images/page1_img4.jpg" alt="" class="fleft img_inner">
-      {{-- <div class="extra_wrapper">
-        <div class="cont"> Call Us Free: <span>+1 800 559 6580</span> </div>
-      </div> --}}
       <div class="clear"></div>
       <p>Entre em contato através do nosso formulário de <a href="{{route('contacts')}}">contato</a>.</p>
     </div>

@@ -12,15 +12,15 @@
     <div class="clear"></div>
 
     <div class="bg-gray-100 p-5 mb-5">
-        <form class="flex gap-1">
-            <input name="name" id="name" value="{{request('name') ?? ''}}" type="text" placeholder="Nome" class="p-2 w-1/4">
-            <select name="breed_id" id="breed_id" class="p-2 w-1/4">
+        <form class="form-filter-pets sm:block md:flex gap-1">
+            <input name="name" id="name" value="{{request('name') ?? ''}}" type="text" placeholder="Nome" class="p-2 sm:mb-3 md:mb-0 sm:w-full md:w-1/4">
+            <select name="breed_id" id="breed_id" class="p-2 sm:mb-3 md:mb-0 sm:w-full md:w-1/4">
                 <option value="">Selecione</option>
                 @foreach ($breeds as $breed)
                     <option value="{{$breed->id}}" {{request('breed_id') == $breed->id ? 'selected' : ''}}>{{$breed->breed}}</option>
                 @endforeach
             </select>
-            <select name="color" id="color" class="p-2 w-1/4">
+            <select name="color" id="color" class="p-2 sm:mb-3 md:mb-0 sm:w-full md:w-1/4">
                 <option value="">Selecione</option>
                 <option {{request('color') == 'Amarelo' ? 'selected' : ''}}>Amarelo</option>
                 <option {{request('color') == 'Chocolate' ? 'selected' : ''}}>Chocolate</option>
@@ -32,12 +32,12 @@
                 <option {{request('color') == 'Azul' ? 'selected' : ''}}>Azul</option>
                 <option {{request('color') == 'Vermelho' ? 'selected' : ''}}>Vermelho</option>
             </select>
-            <button class="w-1/4 bg-gray-300 text-white hover:bg-gray-500">Buscar</button>
+            <button class="sm:w-full md:w-1/4 bg-gray-300 text-white hover:bg-gray-500">Buscar</button>
         </form>
     </div>
 
     @foreach($pets as $key => $pet)
-        <div class="grid_4">
+        <div class="grid_4 search-list">
           <div class="pad2"> <img src="{{asset('photos')}}/{{$pet->photo}}" alt="" class="img_inner fleft i2" width="139">
             <div class="extra_wrapper">
               <div class="text2 col2">

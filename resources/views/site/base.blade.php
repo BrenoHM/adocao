@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Club Pet @yield('title')</title>
+<title>{{config('app.name')}}  @yield('title')</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="{{asset('favicon.ico')}}">
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -49,7 +50,7 @@ function logout(){
 <link rel="stylesheet" media="screen" href="css/ie.css">
 <![endif]-->
 </head>
-<body class="page1">
+<body>
 <header>
   <div class="container_12">
     <div class="grid_12">
@@ -97,7 +98,7 @@ function logout(){
     <div class="container_12">
       <div class="grid_12">
         {{-- <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div> --}}
-        <p>ClubPet &copy; @php echo date('Y'); @endphp | <a href="#">Privacy Policy</a> | Design by: <a href="https://github.com/BrenoHM" target="_blank">Breno Mol</a></p>
+        <p>{{config('app.name')}} &copy; @php echo date('Y'); @endphp | <a href="#">Privacy Policy</a> | Design by: <a href="https://github.com/BrenoHM" target="_blank">Breno Mol</a></p>
       </div>
       <div class="clear"></div>
     </div>

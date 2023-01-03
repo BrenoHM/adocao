@@ -14,7 +14,9 @@
 */
 
 body {
-  min-width: 960px;
+  /* min-width: 960px;
+  max-width: 960px; */
+  width: 100%;
 }
 
 /* `Container
@@ -23,7 +25,9 @@ body {
 .container_12 {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  /* width: 960px; */
+  max-width: 960px;
+  width: 100%;
 }
 
 /* `Grid >> Global
@@ -43,8 +47,9 @@ body {
 .grid_12 {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+  padding: 0 10px;
 }
 
 .push_1, .pull_1,
@@ -88,19 +93,23 @@ body {
 }
 
 .container_12 .grid_4 {
-  width: 300px;
+  /* width: 300px; */
+  width: 31.25%;
 }
 
 .container_12 .grid_5 {
-  width: 380px;
+  /* width: 380px; */
+  width: 39.58%;
 }
 
 .container_12 .grid_6 {
-  width: 460px;
+  /* width: 460px; */
+  width: 47.91%;
 }
 
 .container_12 .grid_7 {
-  width: 540px;
+  /* width: 540px; */
+  width: 56.25%;
 }
 
 .container_12 .grid_8 {
@@ -120,7 +129,8 @@ body {
 }
 
 .container_12 .grid_12 {
-  width: 940px;
+  /* width: 940px; */
+  width: 97.91%;
 }
 
 /* `Prefix Extra Space >> 12 Columns

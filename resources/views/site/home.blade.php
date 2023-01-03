@@ -85,7 +85,7 @@
 </div>
 <div class="page1_block">
   <div class="container_12">
-    <div class="grid_6">
+    <div class="grid_6 welcome">
       <h2>Bem vindo ao nosso site</h2>
       <br>
       <img src="images/page1_img5.jpg" alt="" class="img_inner fleft">

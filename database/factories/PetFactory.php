@@ -23,7 +23,7 @@ class PetFactory extends Factory
             'color' => fake()->randomElement(['Amarelo', 'Chocolate', 'Branco', 'Preto', 'Cinzento', 'Dourado', 'Creme', 'Azul', 'Vermelho']),
             'phone' => '(31) 98897-5279',
             'birthday' => fake()->date(),
-            'photo' => fake()->randomElement(['carousel1_img1.jpg', 'carousel1_img2.jpg', 'carousel1_img3.jpg', 'carousel1_img4.jpg', '1671648735.png', '1671734146.jpg']),
+            'photo' => fake()->randomElement(['carousel1_img1.jpg', 'carousel1_img2.jpg', 'carousel1_img3.jpg', '1671734146.jpg', '1672171265.jpg', '1672333557.jpg']),
             'description' => fake()->text()
         ];
     }

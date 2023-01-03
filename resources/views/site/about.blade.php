@@ -22,7 +22,7 @@
         </div>
       </div>
       
-      <div class="grid_4 prefix_1">
+      <div class="grid_5">
         <h2 class="ic1">Breve História</h2>
         <p>{{$pet->description}}</p>
 
@@ -31,6 +31,7 @@
           Entrar em contato
         </a>
 
+        <div class="clear"></div>
         <h2 class="ic1">Compartilhe</h2>
 
         <div class="btn-compartilhar">

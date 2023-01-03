@@ -21,6 +21,7 @@ text-decoration:none;
 
 * {
 	-webkit-text-size-adjust: none;
+	box-sizing: border-box;
 }
 
 
@@ -28,13 +29,14 @@ body {
 	font: 16px/20px  Arial, Helvetica, sans-serif;
 	color:#9b9a9a;
 	position:relative;
-	min-width:960px;
+	/* min-width:960px; */
 	background: #e3e3e3;
-
 }
 
 body.page1 {
-	min-width: 1233px !important; 
+	/* min-width: 1233px !important; */
+	max-width: 1233px;
+	width: 100%;
 }
 
 .ic, .ic a {
@@ -550,6 +552,7 @@ a.next:hover {
 	transition: 0s ease;
 	-webkit-transition: 0s ease;
 	-o-transition: 0s ease;	
+	right: 10% !important;
 }
 #toTop:hover {
 	background-position: 0 bottom;
@@ -728,4 +731,86 @@ footer address {
 
 .btn-compartilhar .fa.fa-facebook-official {
 	color: #0165E1;
+}
+
+@media screen and (max-width: 977px) {
+
+	.container_12 .grid_5,
+	.container_12 .grid_6 {
+		width: 100%;
+	}
+
+	.container_12 .prefix_1,
+	.container_12 .prefix_2 {
+		padding-left: 10px;
+	}
+
+	.grid_4.search-list {
+		width: 100%;
+	}
+
+	.slider .banner {
+		top: inherit !important;
+		left: 0px !important;
+		width: 100% !important;
+		padding-top: 5px !important;
+		text-align: center;
+		height: 100px;
+	}
+
+	.clear.he1 {
+		height: 0 !important;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	form.form-filter-pets input, form.form-filter-pets select, form.form-filter-pets button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 626px) {
+	
+	header h1 a {
+		float: none;
+		text-align: center;
+	}
+
+	.menu_block {
+		float: none;
+	}
+
+	.sf-menu>li+li,
+	.sf-menu>li.current {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	svg {
+		display: unset !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container_12 .grid_7,
+	.container_12 .grid_4 {
+		width: 100%;
+	}
+	#toTop {
+		right: 15% !important;
+	}
+}
+
+@media screen and (max-width: 417px) {
+	.pix-code {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.welcome .extra_wrapper.style1 {
+		float: left;
+	}
 }

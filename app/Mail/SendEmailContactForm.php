@@ -31,7 +31,7 @@ class SendEmailContactForm extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Email enviado contato Club Pet',
+            subject: 'Email enviado contato ' . config('app.name'),
         );
     }
 

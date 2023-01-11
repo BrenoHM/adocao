@@ -52,6 +52,10 @@
 </script>
 @endsection
 
+@section('head')
+  @include('site.adsense')
+@endsection
+
 @section('content')
 <div class="top_block">
   <div class="slider-relative">

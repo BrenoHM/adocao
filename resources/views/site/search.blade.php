@@ -1,7 +1,10 @@
 @extends('site.base')
 @section('title', "| Search")
 @section('js')
-<script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+@endsection
+@section('head')
+  @include('site.adsense')
 @endsection
 @section('content')
 <div class="content">

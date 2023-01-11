@@ -49,6 +49,8 @@ function logout(){
 <script src="js/html5shiv.js"></script>
 <link rel="stylesheet" media="screen" href="css/ie.css">
 <![endif]-->
+
+@yield('head')
 </head>
 <body>
 <header>

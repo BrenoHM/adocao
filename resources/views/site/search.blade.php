@@ -3,9 +3,9 @@
 @section('js')
   <script src="https://cdn.tailwindcss.com"></script>
 @endsection
-@section('head')
+{{-- @section('head')
   @include('site.adsense')
-@endsection
+@endsection --}}
 @section('content')
 <div class="content">
   <div class="container_12">
